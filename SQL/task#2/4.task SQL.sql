@@ -29,7 +29,7 @@ SELECT CONCAT(mn.name, ' ', md.name) AS auto, CONCAT(s.first_name, ' ', s.last_n
 	JOIN manufacturers mn ON mn.id = md.manufacturer_id
 WHERE o.name = 'Laconia'
 
--- Найти марку с наибольшим количеством автомобилей в системе
+-- Найти марку с наибольшим количеством автомобилей в системе:
 
 SELECT mn.name, SUM(q.count) FROM models md
 	JOIN quantity q ON q.model_id = md.id
